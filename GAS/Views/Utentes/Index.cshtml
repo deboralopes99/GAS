@@ -1,0 +1,94 @@
+﻿@model IEnumerable<GAS.Models.Utentes>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - GAS</title>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" />
+        <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script defer src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+        <script defer src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
+        <script src="~/js/site.js"></script>
+      
+        
+</head>
+
+<table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Data</th>
+                <th>Nome</th>
+                <th>Localidade</th>
+                <th>Telemóvel</th>
+                <th>NIF</th>
+                <th>SNS</th>
+                <th>Apoios</th>
+                <th>Agregado</th>
+                <th>Atendimento Social</th>
+                <th>Docs</th>                
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Localidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telemovel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NIF)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SNS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                 <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+
+
+            </tr>
+
+        }
+           
+        <tfoot>
+            <tr>
+                <th>ID</th>
+                <th>Data</th>
+                <th>Nome</th>
+                <th>Localidade</th>
+                <th>Telemóvel</th>
+                <th>NIF</th>
+                <th>SNS</th>
+                <th>Apoios</th>
+                <th>Agregado</th>
+                <th>Atendimento Social</th>
+                <th>Docs</th>
+        </tr>
+        </tfoot>
+    </table>
